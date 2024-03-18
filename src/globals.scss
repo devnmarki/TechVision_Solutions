@@ -12,6 +12,7 @@
 body {
     font-family: var.$font;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 h1, 
@@ -41,4 +42,8 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.highlight {
+    color: var.$lightBlue;
 }

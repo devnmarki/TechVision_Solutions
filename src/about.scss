@@ -1,45 +1,42 @@
 @use "utils/variables" as var;
 @use "utils/mixins" as mix;
 
-.hero {
+.about {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 778px;
+    padding: 40px 15px;
     row-gap: 40px;
-    margin-top: 40px;
 
     &__image {
         width: 335px;
-        height: 163px;
+        margin-top: -75px;
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         row-gap: 20px;
+        width: 337px;
 
         h1 {
             font-size: 2rem;
             font-weight: var.$extraBold;
-            color: var.$white;
+            color: var.$blue;
         }
 
         p {
             font-size: 1rem;
             font-weight: var.$regular;
-            color: var.$white;
+            color: var.$grey;
         }
 
         .cta {
-            width: 200px;
-            height: 50px;
+            width: 150px;
+            height: 40px;
             background-color: var.$lightBlue;
-            font-size: 14px;
-            font-weight: var.$regular;
             border: none;
+            font-size: 0.875rem;
+            font-weight: var.$regular;
             color: var.$white;
             border-radius: 10px 0px 10px 0px;
             transition: opacity 150ms, box-shadow 150ms;
@@ -53,22 +50,18 @@
 }
 
 @include mix.breakpoint-desktop(medium) {
-    .hero {
-        padding: 0;
-        margin-top: 50px;
-        height: 730px;
+    .about {
+        flex-direction: row-reverse;
+        column-gap: 100px;
+        align-items: center;
+        padding: 100px 0px;
 
         &__image {
-            width: 651px;
-            height: 315px;
+            width: 525px;
         }
 
         &__text {
-            width: 448px;
-
-            h1 {
-                font-size: 2.25rem;
-            }
+            width: 435px;
         }
     }
 }
