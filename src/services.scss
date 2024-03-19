@@ -1,0 +1,81 @@
+@use "utils/variables" as var;
+@use "utils/mixins" as mix;
+
+.services {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, var.$gradient1, var.$gradient2);
+    padding: 40px 0px;
+    row-gap: 43px;
+
+    &__header {
+        font-size: 2rem;
+        font-weight: var.$extraBold;
+        color: var.$white;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 40px;
+
+        .service {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            height: 100px;
+            background-color: var.$white;
+            border-radius: 10px 0px 10px 0px;
+            padding-left: 20px;
+            column-gap: 10px;
+            transition: transform 200ms, box-shadow 200ms;
+            cursor: pointer;
+            
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 20px var.$white;
+            }
+
+            .icon_bg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                background-color: var.$blue;
+                border-radius: 5px 0px 5px 0px;
+            }
+
+            .icon_bg_light {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                background-color: var.$lightBlue;
+                border-radius: 5px 0px 5px 0px;
+            }
+
+            &__title {
+                font-size: 1rem;
+                font-weight: var.$semiBold;
+                color: var.$grey;
+            }
+        }
+    }
+}
+
+@include mix.breakpoint-desktop(medium) {
+    .services {
+        padding: 100px 0px;
+
+        &__container {
+            flex-direction: row;
+            column-gap: 40px;
+        }
+    }
+}
