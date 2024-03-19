@@ -1,0 +1,133 @@
+@use "utils/variables" as var;
+@use "utils/mixins" as mix;
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    row-gap: 50px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 332px;
+        row-gap: 20px;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: var.$extraBold;
+            color: var.$blue;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: var.$regular;
+            color: var.$grey;
+            text-align: center;
+            line-height: 175%;
+        }
+    }
+
+    &__projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+
+            &__image {
+                width: 333px;
+                border: 2px solid var.$blue;
+                border-radius: 30px 0px 30px 0px;
+            }
+
+            &__description {
+                display: flex;
+                flex-direction: column;
+                width: 332px;
+                row-gap: 20px;
+
+                h1 {
+                    font-size: 1.25rem;
+                    font-weight: var.$bold;
+                    color: var.$blue;
+                }
+
+                p {
+                    font-size: 0.875rem;
+                    font-weight: var.$regular;
+                    color: var.$grey;
+                    line-height: 175%;
+                }
+
+                button {
+                    width: 150px;
+                    height: 40px;
+                    border: none;
+                    background-color: var.$lightBlue;
+                    font-size: 0.875rem;
+                    color: var.$white;
+                    border-radius: 10px 0px 10px 0px;
+                    transition: opacity 150ms, box-shadow 150ms;
+
+                    &:hover {
+                        opacity: 0.8;
+                        box-shadow: 0px 0px 20px var.$lightBlue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mix.breakpoint-desktop(medium) {
+    .portfolio {
+        row-gap: 65px;
+        padding: 100px 0px;
+
+        &__header {
+            
+            p {
+                width: 450px;
+            }
+        }
+
+        &__projects {
+            row-gap: 80px;
+
+            .project {
+                flex-direction: row;
+                column-gap: 15px;
+
+                &__image {
+                    width: 616px;
+                }
+
+                &__description {
+                    align-items: center;
+                    width: 433px;
+                    text-align: center;
+
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .middle {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
