@@ -17,35 +17,47 @@
         <img src="src/assets/images/Logo.svg" class="header__logo">
         <img src="src/assets/icons/bars-solid 1.svg" class="header__menu_open_btn" id="open">
         <div class="header__links">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT US</a>
-          <a href="#">SERVICES</a>
-          <a href="#">PORTFOLIO</a>
-          <a href="#">TESTIMONIALS</a>
-          <a href="#">CONTACT US</a>
+          <a href="#hero">HOME</a>
+          <a href="#about">ABOUT US</a>
+          <a href="#services">SERVICES</a>
+          <a href="#portfolio">PORTFOLIO</a>
+          <a href="#testimonials">TESTIMONIALS</a>
+          <a href="#contact">CONTACT US</a>
+        </div>
+
+        <div class="menu" id="menu">
+          <img src="src/assets/icons/Vector.svg" class="close_menu_btn" id="close">
+          <div class="links">
+            <a href="#hero">HOME</a>
+            <a href="#about">ABOUT US</a>
+            <a href="#services">SERVICES</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#testimonials">TESTIMONIALS</a>
+            <a href="#contact">CONTACT US</a>
+          </div>
         </div>
       </header>
 
-      <main class="hero">
+      <main class="hero" id="hero">
          <img src="src/assets/images/undraw_development_re_g5hq.svg" class="hero__image">
          <div class="hero__text">
           <h1>Welcome to TechVision Solutions</h1>
           <p>Empowering Your Digital Future</p>
-          <button class="cta">Explore Our Solutions</button>
+          <button class="cta" id="explore-solutions-btn">Explore Our Solutions</button>
          </div>
       </main>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__text">
           <h1>About <span class="highlight">Us</span></h1>
           <p>At TechVision Solutions, we're committed to driving growth and success for businesses through transformative technology solutions.</p>
           <p>With a team of skilled professionals, we deliver cutting-edge software development, AI & machine learning solutions, and comprehensive cybersecurity services.</p>
-          <button class="cta">Our Projects</button>
+          <button class="cta" id="our-projects-btn">Our Projects</button>
         </div>
         <img src="src/assets/images/undraw_team_page_re_cffb 1.svg" class="about__image">
       </section>
 
-      <section class="services">
+      <section class="services" id="services">
         <h1 class="services__header">Our Services</h1>
         <div class="services__container">
 
@@ -67,7 +79,7 @@
         </div>
       </section>
 
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="portfolio__header">
           <h1>Portfolio</h1>
           <p>Explore some of our best projects that highlight our expertise and innovation in delivering transformative technology solutions.</p>
@@ -105,7 +117,7 @@
         </div>
       </section>
 
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
         <h1>Testimonials</h1>
         <div class="testimonials__container">
           
@@ -146,7 +158,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
          <div class="contact__first">
           <h1>Contact <span class="highlight">Us</span></h1>
           <p>Ready to transform your business? Get in touch with TechVision Solutions today to schedule a consultation.</p>
@@ -190,6 +202,7 @@
 
     </div>
 
+    <button class="scroll_btn" id="scroll"><img src="src/assets/icons/up-arrow-icon.svg"></button>
 
     <script type="module" src="/main.js"></script>
   </body>
