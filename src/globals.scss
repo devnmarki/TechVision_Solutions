@@ -28,6 +28,11 @@ a {
     text-decoration: none;
 }
 
+input,
+textarea {
+    outline: none;
+}
+
 .bg_gradient {
     position: absolute;
     top: 0;
